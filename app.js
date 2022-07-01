@@ -16,7 +16,7 @@ app.use(cors({
   
   const upload = multer({ dest: 'uploads/' });
 
-  app.get('/',()=>{
+  app.get('/',(req,res)=>{
     res.send('Yo.....send requests to /upload to upload your file')
   })
 
