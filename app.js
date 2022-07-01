@@ -59,6 +59,8 @@ form.append('fileUpload', fs.createReadStream(fileUpload.path));
     .then((response) => response.json())
     .then((data) => {res.send(data)});
 });
-app.listen(4000, () => {
-    console.log('Running on port 4000');
+
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, () => {
+    console.log(`Running on port: ${PORT}`);
   });
