@@ -16,6 +16,10 @@ app.use(cors({
   
   const upload = multer({ dest: 'uploads/' });
 
+  app.get('/',()=>{
+    res.send('Yo.....send requests to /upload to upload your file')
+  })
+
 app.post('/upload', upload.single('image'), (req, res, next) => {
   const fileUpload = req.file;
 
